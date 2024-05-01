@@ -1,0 +1,33 @@
+body{
+  font-family:  "Roboto", arial, sans-serif;
+}
+ol{
+  font-size: small;
+}
+
+.scroll-container {
+  height: 200px; /* Adjust height as needed */
+  width: 300px;
+  overflow-y: scroll;
+  border: 1px solid #ddd; /* Optional border for styling */
+}
+
+header{
+  font-weight:bold;
+  text-align: left;
+  padding-left: 2%;
+  background-color: #ffd000;
+  display: flex;
+
+}
+button, input[type=button]{
+  color:#1a1446;
+  background-color: #99e5ea;
+  border-radius: 15%;
+  border: 1rem !important;
+  align-content: end;
+  padding: 0.5rem;
+  font-weight: bold;
+  border-radius: 3rem;
+  text-transform: uppercase;
+}
