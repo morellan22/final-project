@@ -34,6 +34,10 @@ export function SavedQueries(params) {
             : <li>No Saved Queries, Yet!</li>
           }</ul>
           </div>
+          <span className="buttonQuery">
+              <input type="button" className={(params.currentUserMatches("admin"))?"visible":"hidden"} value="Delete All" onClick={() => {if(window.confirm('Are you sure you want to erase the list?')){params.resetToParent()};}} />
+          </span>                
+
         </div>
       )
     

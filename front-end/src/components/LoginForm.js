@@ -20,7 +20,7 @@ export function LoginForm(params) {
             </div>
             <div className="user">
             &nbsp;User: <span style={{ fontWeight: "bold" }} >{(params.currentUser) ? params.currentUser.user : "not logged in"}</span>
-           <button className="--bs-primary" onClick={params.login}>
+           <button onClick={params.login}>
                 {(params.currentUser) ? "Logout" : "Login"}
             </button>
             </div>

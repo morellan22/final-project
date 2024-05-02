@@ -82,6 +82,7 @@ export function NewsReader() {
     if (currentUser !== null) {
       // logout
       setCurrentUser(null);
+      deleteAllQueryApi();
     } else {
       loginApi(credentials, setCurrentUser);
     }
@@ -110,7 +111,8 @@ export function NewsReader() {
             <SavedQueries savedQueries={savedQueries} 
             currentUserMatches={currentUserMatches}
               selectedQueryName={query.queryName} 
-              selectedQuery={query} 
+              selectedQuery={query}
+              resetToParent={onFormReset} 
               onQuerySelect={onSavedQuerySelect}/>
           </div>
           <div className="box">

@@ -45,8 +45,7 @@ export function QueryForm(params) {
             </div>
              <span className="buttonQuery">
                     <input type="button" value="Submit" onClick={onSubmitClick} />
-                    <input type="button" className={(params.currentUser)?"visible":"hidden"} value="Reset" onClick={() => {if(window.confirm('Delete the item?')){params.resetToParent(params.formObject)};}} />
-                    <input type="button" className={(params.currentUserMatches("admin"))?"visible":"hidden"} value="ResetAll" onClick={() => {if(window.confirm('Are you sure you want to erase the list?')){params.resetToParent()};}} />
+                    <input type="button" className={(params.currentUser)?"visible":"hidden"} value="Delete" onClick={() => {if(window.confirm('Delete the item?')){params.resetToParent(params.formObject)};}} />
                 </span>                
             </form>
 
