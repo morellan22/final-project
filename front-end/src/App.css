@@ -31,3 +31,9 @@ button, input[type=button]{
   border-radius: 3rem;
   text-transform: uppercase;
 }
+.article-photo{
+  width: 60px;
+  height: 100px;
+  float: inline-start;
+  margin-right: 10px;
+}

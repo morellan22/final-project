@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
 
 router.post('/authenticate', async (req, res) => {
 	try {
-		//Geittinf the user credentials from the Req Body.
+		//Getting the user credentials from the Req Body.
 		const loginCredentials = req.body;
 		//Getting the User credentials stored on MongoDB.
 		const result = await collection.findOne({"user":loginCredentials.user});
@@ -31,10 +31,10 @@ router.post('/authenticate', async (req, res) => {
 			if(result.password === loginCredentials.password){
 				res.status(200).send("user passed authentication!")
 			}else{
-				res.status(401).send("unauthorized: bad password");
+				res.status(401).send("Login Failed : Your pasword or User is incorrect. Please try again");
 			}
 		}else{
-		  res.status(401).send("unauthorized: user not found");
+			res.status(401).send("Login Failed : Your pasword or User is incorrect. Please try again");
 		} 
 	  } catch (err) {
 		res.status(400).json({ error: err.message });
